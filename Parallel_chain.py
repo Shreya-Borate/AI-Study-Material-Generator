@@ -43,11 +43,9 @@ parallel_chain = RunnableParallel({
     'quiz' :prompt2 | model2 | parser
 })
 
-# Merge the results
+# Merge notes + quiz
 merge_chain = prompt3 | model1 | parser
 
-# Complete chain
-study_material_chain = parallel_chain
 
-final_chain = parallel_chain | merge_chain
+
 
